@@ -1,0 +1,3 @@
+## Viscosity plug-in for Quicksilver ##
+
+Allows you to find your connections, then connect or disconnect them.

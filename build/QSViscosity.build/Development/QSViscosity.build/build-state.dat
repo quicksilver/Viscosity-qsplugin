@@ -1,0 +1,31 @@
+TQSViscosity
+v7
+r1
+
+N/Users/rob/Coding/Quicksilver/QSViscosity/build/Development/QSViscosity.qsplugin
+t2
+s0
+
+N/Users/rob/Coding/Quicksilver/QSViscosity/build/Development/QSViscosity.qsplugin/Contents/Info.plist
+t2
+s0
+
+N/Users/rob/Coding/Quicksilver/QSViscosity/build/QSViscosity.build/Development/QSViscosity.build/Script-E1022B2806B3475D00299BEC.sh
+c00000000000000000000000000000000
+t2
+s0
+
+NInfo.plist
+c000000004B5EFAF90000000000000C20
+t1264515833
+s3104
+
+CPhaseScriptExecution "Run Script" /Users/rob/Coding/Quicksilver/QSViscosity/build/QSViscosity.build/Development/QSViscosity.build/Script-E1022B2806B3475D00299BEC.sh
+r0
+
+CProcessInfoPlistFile /Users/rob/Coding/Quicksilver/QSViscosity/build/Development/QSViscosity.qsplugin/Contents/Info.plist Info.plist
+r0
+
+CTouch /Users/rob/Coding/Quicksilver/QSViscosity/build/Development/QSViscosity.qsplugin
+r0
+
