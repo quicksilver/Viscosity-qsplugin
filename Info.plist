@@ -7,15 +7,15 @@
 	<key>CFBundleExecutable</key>
 	<string>QSViscosity</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.blacktree.Quicksilver.QSViscosity</string>
+	<string>com.skurfer.Quicksilver.QSViscosity</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>QSViscosity</string>
+	<string>Viscosity Module</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>1A</string>
+	<string>25</string>
 	<key>NSPrincipalClass</key>
 	<string>QSViscosity</string>
 	<key>QSActions</key>
@@ -24,14 +24,16 @@
 		<dict>
 			<key>actionClass</key>
 			<string>QSAppleScriptActions</string>
+			<key>actionHandler</key>
+			<string>viscosity_connect</string>
 			<key>actionScript</key>
 			<string>Viscosity.scpt</string>
-			<key>actionHandler</key>
-			<string>start_connection</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSViscosityType</string>
 			</array>
+			<key>icon</key>
+			<string>com.viscosityvpn.Viscosity</string>
 			<key>name</key>
 			<string>Connect</string>
 			<key>validatesObjects</key>
@@ -60,9 +62,9 @@
 	<array>
 		<dict>
 			<key>ID</key>
-			<string>QSPresetQSViscosity</string>
+			<string>QSPresetViscosity</string>
 			<key>name</key>
-			<string>QSViscosity</string>
+			<string>Viscosity Connections</string>
 			<key>source</key>
 			<string>QSViscositySource</string>
 		</dict>

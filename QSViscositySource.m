@@ -11,45 +11,39 @@
 
 
 @implementation QSViscositySource
-- (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry{
+- (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry
+{
     return YES;
 }
 
-- (NSImage *) iconForEntry:(NSDictionary *)dict{
-    return nil;
-}
-
-
-// Return a unique identifier for an object (if you haven't assigned one before)
-//- (NSString *)identifierForObject:(id <QSObject>)object{
-//    return nil;
-//}
-
-- (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
+- (NSArray *) objectsForEntry:(NSDictionary *)theEntry
+{
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
-	
-	newObject=[QSObject objectWithName:@"TestObject"];
-	[newObject setObject:@"" forType:QSViscosityType];
-	[newObject setPrimaryType:QSViscosityType];
-	[objects addObject:newObject];
-  
-    return objects;
     
+    newObject=[QSObject objectWithName:@"ADESA VPN"];
+    [newObject setObject:@"ADESA" forType:QSViscosityType];
+    [newObject setObject:@"ADESA" forType:QSTextType];
+    [newObject setPrimaryType:QSViscosityType];
+    [newObject setIdentifier:@"viscosityconnection1"];
+    [newObject setDetails:@"Viscosity VPN Connection"];
+    [objects addObject:newObject];
+    
+    return objects;
 }
 
 
 // Object Handler Methods
 
-
-- (void)setQuickIconForObject:(QSObject *)object{
-    [object setIcon:nil]; // An icon that is either already in memory or easy to load
+- (void)setQuickIconForObject:(QSObject *)object
+{
+    [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"visc"]];
 }
 /*
 - (BOOL)loadIconForObject:(QSObject *)object{
-	return NO;
+    return NO;
     id data=[object objectForType:kQSViscosityType];
-	[object setIcon:nil];
+    [object setIcon:nil];
     return YES;
 }
 */
