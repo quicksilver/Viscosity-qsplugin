@@ -73,6 +73,18 @@
 {
     [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"visc"]];
 }
+
+- (BOOL)loadChildrenForObject:(QSObject *)object
+{
+    // Viscosity.app should show connections when you right arrow into it
+    // but the connections themselves shouldn't
+    if (![object containsType:QSViscosityType])
+    {
+        [object setChildren:[self objectsForEntry:nil]];
+        return TRUE;
+    }
+    return FALSE;
+}
 /*
 - (BOOL)loadIconForObject:(QSObject *)object{
     return NO;
