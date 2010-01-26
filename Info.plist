@@ -35,7 +35,7 @@
 			<key>icon</key>
 			<string>com.viscosityvpn.Viscosity</string>
 			<key>name</key>
-			<string>Connect</string>
+			<string>Connect to VPN</string>
 			<key>precedence</key>
 			<string>2</string>
 			<key>validatesObjects</key>
@@ -56,7 +56,7 @@
 			<key>icon</key>
 			<string>com.viscosityvpn.Viscosity</string>
 			<key>name</key>
-			<string>Disconnect</string>
+			<string>Disconnect from VPN</string>
 			<key>precedence</key>
 			<string>2</string>
 			<key>validatesObjects</key>
