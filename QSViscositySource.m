@@ -20,14 +20,48 @@
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
     NSLog(@"scanning Viscosity connections");
-    
-    newObject=[QSObject objectWithName:@"ADESA VPN"];
-    [newObject setObject:@"ADESA" forType:QSViscosityType];
-    [newObject setObject:@"ADESA" forType:QSTextType];
-    [newObject setPrimaryType:QSViscosityType];
-    [newObject setIdentifier:@"viscosityconnection1"];
-    [newObject setDetails:@"Viscosity VPN Connection"];
-    [objects addObject:newObject];
+    NSString *path = [@"~/Library/Application Support/Viscosity/OpenVPN" stringByStandardizingPath];
+    // directory containing connection details
+    NSString *connectionPath = nil;
+    // file containing the connection name
+    NSString *connectionFile = nil;
+    // file handler
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *contents = [manager directoryContentsAtPath:path];
+    for (NSString *connectionDirectory in contents)
+    {
+        connectionPath = [path stringByAppendingPathComponent:connectionDirectory];
+        connectionFile = [connectionPath stringByAppendingPathComponent:@"config.conf"];
+        NSString *connSource = [NSString stringWithContentsOfFile:connectionFile encoding:NSUTF8StringEncoding error:nil];
+        if (!connSource)
+        {
+            NSLog(@"unable to read Viscosity settings at %@", connectionFile);
+            continue;
+        }
+        
+        connSource = [connSource stringByReplacing:@"\n" with:@"\r"];
+        NSArray *lines = [connSource componentsSeparatedByString:@"\r"];
+        for (NSString *line in lines)
+        {
+            // look for the line with the name
+            NSArray *lineParts = [line componentsSeparatedByString:@"#viscosity name "];
+            if ([lineParts count] == 2)
+            {
+                // this looks like the line with the name
+                NSString *connName = [lineParts objectAtIndex:1];
+                newObject = [QSObject objectWithName:connName];
+                [newObject setObject:connName forType:QSViscosityType];
+                [newObject setObject:connName forType:QSTextType];
+                [newObject setPrimaryType:QSViscosityType];
+                [newObject setIdentifier:[NSString stringWithFormat:@"ViscosityVPNConnection%@", connectionDirectory]];
+                [newObject setDetails:@"Viscosity VPN Connection"];
+                [objects addObject:newObject];
+                
+                // no need to process the rest of the lines in the file
+                break;
+            }
+        }
+    }
     
     return objects;
 }
