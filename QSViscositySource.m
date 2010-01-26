@@ -19,6 +19,7 @@
 {
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
+    NSLog(@"scanning Viscosity connections");
     
     newObject=[QSObject objectWithName:@"ADESA VPN"];
     [newObject setObject:@"ADESA" forType:QSViscosityType];

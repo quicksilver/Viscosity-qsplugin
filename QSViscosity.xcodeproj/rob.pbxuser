@@ -53,15 +53,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 286222363;
-			PBXWorkspaceStateSaveDate = 286222363;
+			PBXPerProjectTemplateStateSaveDate = 286223053;
+			PBXWorkspaceStateSaveDate = 286223053;
 		};
 		perUserProjectItems = {
 			D4C5C522110F32EA00C882F8 /* PBXTextBookmark */ = D4C5C522110F32EA00C882F8 /* PBXTextBookmark */;
 			D4C5C543110F478400C882F8 /* PBXTextBookmark */ = D4C5C543110F478400C882F8 /* PBXTextBookmark */;
-			D4E0962F110F67E000249396 /* PBXTextBookmark */ = D4E0962F110F67E000249396 /* PBXTextBookmark */;
-			D4E09647110F681200249396 /* PlistBookmark */ = D4E09647110F681200249396 /* PlistBookmark */;
-			D4E0966B110F68F100249396 /* PlistBookmark */ = D4E0966B110F68F100249396 /* PlistBookmark */;
+			D4E096B2110F78BD00249396 /* PBXTextBookmark */ = D4E096B2110F78BD00249396 /* PBXTextBookmark */;
+			D4E096B3110F78BD00249396 /* PlistBookmark */ = D4E096B3110F78BD00249396 /* PlistBookmark */;
+			D4E096B4110F78BD00249396 /* PlistBookmark */ = D4E096B4110F78BD00249396 /* PlistBookmark */;
 			D4E3B30F110F487300A2EA0E /* PBXTextBookmark */ = D4E3B30F110F487300A2EA0E /* PBXTextBookmark */;
 		};
 		sourceControlManager = D4C5C50D110F32A100C882F8 /* Source Control */;
@@ -96,7 +96,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {906, 650}}";
 			sepNavSelRange = "{1009, 0}";
-			sepNavVisRange = "{0, 830}";
+			sepNavVisRange = "{286, 868}";
 		};
 	};
 	D4C5C50D110F32A100C882F8 /* Source Control */ = {
@@ -133,17 +133,17 @@
 		vrLen = 271;
 		vrLoc = 0;
 	};
-	D4E0962F110F67E000249396 /* PBXTextBookmark */ = {
+	D4E096B2110F78BD00249396 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = BBF581830B1D9DC3003CFF55 /* QSViscositySource.m */;
 		name = "QSViscositySource.m: 42";
 		rLen = 0;
 		rLoc = 1009;
 		rType = 0;
-		vrLen = 830;
-		vrLoc = 0;
+		vrLen = 868;
+		vrLoc = 286;
 	};
-	D4E09647110F681200249396 /* PlistBookmark */ = {
+	D4E096B3110F78BD00249396 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1AC9730486D14A00FE50C9 /* Info.plist */;
 		fallbackIsa = PBXBookmark;
@@ -152,9 +152,9 @@
 		);
 		name = /Users/rob/Coding/Quicksilver/QSViscosity/Info.plist;
 		rLen = 0;
-		rLoc = 9223372036854775808;
+		rLoc = 9223372036854775807;
 	};
-	D4E0966B110F68F100249396 /* PlistBookmark */ = {
+	D4E096B4110F78BD00249396 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1AC9730486D14A00FE50C9 /* Info.plist */;
 		fallbackIsa = PBXBookmark;
