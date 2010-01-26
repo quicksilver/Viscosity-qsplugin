@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -293,7 +295,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>111 178 1175 647 0 0 1440 878 </string>
+						<string>138 182 1175 647 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -304,8 +306,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -323,14 +323,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D4E3B310110F487300A2EA0E</string>
+										<string>D4E095F9110F653F00249396</string>
 										<key>history</key>
 										<array>
 											<string>D4C5C522110F32EA00C882F8</string>
 											<string>D4C5C543110F478400C882F8</string>
 											<string>D4E3B303110F482000A2EA0E</string>
 											<string>D4E3B30F110F487300A2EA0E</string>
-											<string>D4E3B304110F482000A2EA0E</string>
+											<string>D4E095E2110F647A00249396</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -342,14 +342,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {967, 459}}</string>
+								<string>{{0, 0}, {967, 449}}</string>
 								<key>RubberWindowFrame</key>
-								<string>111 178 1175 647 0 0 1440 878 </string>
+								<string>138 182 1175 647 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>459pt</string>
+							<string>449pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -362,14 +362,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 464}, {967, 142}}</string>
+								<string>{{0, 454}, {967, 152}}</string>
 								<key>RubberWindowFrame</key>
-								<string>111 178 1175 647 0 0 1440 878 </string>
+								<string>138 182 1175 647 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>142pt</string>
+							<string>152pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -388,9 +388,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D4E3B307110F482000A2EA0E</string>
+				<string>D4E095FA110F653F00249396</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D4E3B308110F482000A2EA0E</string>
+				<string>D4E095FB110F653F00249396</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -532,7 +532,7 @@
 		<string>/Users/rob/Coding/Quicksilver/QSViscosity/QSViscosity.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>111 178 1175 647 0 0 1440 878 </string>
+	<string>138 182 1175 647 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -609,7 +609,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D4C5C50B110F32A100C882F8</string>
-				<string>D4E3B309110F482000A2EA0E</string>
+				<string>D4E095FC110F653F00249396</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
