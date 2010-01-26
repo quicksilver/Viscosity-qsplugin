@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>25</string>
+	<string>2A</string>
 	<key>NSPrincipalClass</key>
 	<string>QSViscosity</string>
 	<key>QSActions</key>

@@ -24,12 +24,12 @@
 		7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1AC9740486D14A00FE50C9 /* QSViscosity.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSViscosity.qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF5817A0B1D9D84003CFF55 /* QSViscosityAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSViscosityAction.h; sourceTree = "<group>"; };
 		BBF5817B0B1D9D84003CFF55 /* QSViscosityAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSViscosityAction.m; sourceTree = "<group>"; };
 		BBF581820B1D9DC3003CFF55 /* QSViscositySource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSViscositySource.h; sourceTree = "<group>"; };
 		BBF581830B1D9DC3003CFF55 /* QSViscositySource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSViscositySource.m; sourceTree = "<group>"; };
 		D4C5C540110F477700C882F8 /* Viscosity.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = Viscosity.scpt; sourceTree = "<group>"; };
+		D4E09662110F68D300249396 /* Viscosity Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Viscosity Module.qsplugin"; path = "build/Release/Viscosity Module.qsplugin"; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1EAB045068128A200774DFF /* QSViscosity.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSViscosity.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* QSViscosity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSViscosity.h; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1AC9740486D14A00FE50C9 /* QSViscosity.qsplugin */,
+				D4E09662110F68D300249396 /* Viscosity Module.qsplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1AC9600486D14A00FE50C9 /* QSViscosity */ = {
+		8D1AC9600486D14A00FE50C9 /* Viscosity Module */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "QSViscosity" */;
+			buildConfigurationList = 7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "Viscosity Module" */;
 			buildPhases = (
 				8D1AC9660486D14A00FE50C9 /* Resources */,
 				8D1AC96A0486D14A00FE50C9 /* Sources */,
@@ -137,10 +137,10 @@
 			);
 			dependencies = (
 			);
-			name = QSViscosity;
+			name = "Viscosity Module";
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSViscosity;
-			productReference = 8D1AC9740486D14A00FE50C9 /* QSViscosity.qsplugin */;
+			productReference = D4E09662110F68D300249396 /* Viscosity Module.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -158,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1AC9600486D14A00FE50C9 /* QSViscosity */,
+				8D1AC9600486D14A00FE50C9 /* Viscosity Module */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +233,7 @@
 				GCC_PREFIX_HEADER = QSViscosity_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = QSViscosity;
+				PRODUCT_NAME = "Viscosity Module";
 				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
@@ -263,7 +263,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "QSViscosity" */ = {
+		7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "Viscosity Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F6B3EEC085CE8DF000735A8 /* Development */,
