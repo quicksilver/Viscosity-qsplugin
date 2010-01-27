@@ -12,6 +12,29 @@
 @implementation QSViscositySource
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry
 {
+    NSString *path = [@"~/Library/Application Support/Viscosity/OpenVPN" stringByStandardizingPath];
+    // directory containing connection details
+    NSString *connectionPath = nil;
+    // file handler
+    NSFileManager *manager = [NSFileManager defaultManager];
+    // this should trigger if a connection is added or removed
+    NSDate *modified = [[manager attributesOfItemAtPath:path error:NULL] fileModificationDate];
+    if ([indexDate compare:modified] == NSOrderedAscending) {
+        // trigger a rescan
+        return NO;
+    }
+    NSArray *contents = [manager directoryContentsAtPath:path];
+    for (NSString *connectionDirectory in contents)
+    {
+        connectionPath = [path stringByAppendingPathComponent:connectionDirectory];
+        NSDate *modified = [[manager attributesOfItemAtPath:connectionPath error:NULL] fileModificationDate];
+        // this should trigger if an existing connection was modified
+        if ([indexDate compare:modified] == NSOrderedAscending) {
+            // something new - trigger a rescan
+            return NO;
+        }
+    }
+    // don't rescan by default
     return YES;
 }
 
@@ -19,7 +42,6 @@
 {
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
-    NSLog(@"scanning Viscosity connections");
     NSString *path = [@"~/Library/Application Support/Viscosity/OpenVPN" stringByStandardizingPath];
     // directory containing connection details
     NSString *connectionPath = nil;
@@ -35,7 +57,7 @@
         NSString *connSource = [NSString stringWithContentsOfFile:connectionFile encoding:NSUTF8StringEncoding error:nil];
         if (!connSource)
         {
-            NSLog(@"unable to read Viscosity settings at %@", connectionFile);
+            NSLog(@"unable to read Viscosity settings from %@", connectionFile);
             continue;
         }
         
@@ -44,6 +66,10 @@
         for (NSString *line in lines)
         {
             // look for the line with the name
+            /* This is a bit hacky, but we need to find the line somehow anyway,
+               and the line needs to be split when it's found, so why not combine
+               the steps? Only a line containing the name setting will split into
+               more than one item, so that's how we test. */
             NSArray *lineParts = [line componentsSeparatedByString:@"#viscosity name "];
             if ([lineParts count] == 2)
             {
