@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>42</string>
+	<string>43</string>
 	<key>NSPrincipalClass</key>
 	<string>QSViscosity</string>
 	<key>QSActions</key>
@@ -146,15 +146,15 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>QSRequirementsTemplate</key>
+	<key>QSRequirements</key>
 	<dict>
-		<key>bundlesTemplate</key>
+		<key>bundles</key>
 		<array>
 			<dict>
 				<key>id</key>
-				<string></string>
+				<string>com.viscosityvpn.Viscosity</string>
 				<key>name</key>
-				<string></string>
+				<string>Viscosity</string>
 				<key>version</key>
 				<string></string>
 			</dict>
