@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>40</string>
+	<string>42</string>
 	<key>NSPrincipalClass</key>
 	<string>QSViscosity</string>
 	<key>QSActions</key>
@@ -74,6 +74,19 @@
 		</array>
 		<key>description</key>
 		<string>Access VPN connections in Viscosity</string>
+		<key>extendedDescription</key>
+		<string>&lt;h2 id="viscosity_plug_in_for_quicksilver"&gt;Viscosity plug-in for Quicksilver&lt;/h2&gt;
+
+&lt;p&gt;It's pretty simple. The VPN connections you've defined in Viscosity get added to the catalog. You can either search for them directly or right arrow into the Viscosity application.&lt;/p&gt;
+
+&lt;p&gt;There are two actions available for a Viscosity connection:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Connect to VPN&lt;/li&gt;
+&lt;li&gt;Disconnect from VPN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;NOTE: If Viscosity isn't running, these actions will start it. This is generally what you want, but be aware that if you've configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.viscosityvpn.Viscosity</string>
 		<key>qsversion</key>

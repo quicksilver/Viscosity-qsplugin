@@ -1,3 +1,10 @@
 ## Viscosity plug-in for Quicksilver ##
 
-Allows you to find your connections, then connect or disconnect them.
+It's pretty simple. The VPN connections you've defined in Viscosity get added to the catalog. You can either search for them directly or right arrow into the Viscosity application.
+
+There are two actions available for a Viscosity connection:
+
+  * Connect to VPN
+  * Disconnect from VPN
+
+NOTE: If Viscosity isn't running, these actions will start it. This is generally what you want, but be aware that if you've configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.
