@@ -1,10 +1,17 @@
 ## Viscosity plug-in for Quicksilver ##
 
-It's pretty simple. The VPN connections you've defined in Viscosity get added to the catalog. You can either search for them directly or right arrow into the Viscosity application.
+The VPN connections you've defined in Viscosity get added to the catalog. You can either search for them directly or right arrow into the Viscosity application.
 
 There are two actions available for a Viscosity connection:
 
   * Connect to VPN
   * Disconnect from VPN
 
-NOTE: If Viscosity isn't running, these actions will start it. This is generally what you want, but be aware that if you've configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.
+There are also two actions available if you select the Viscosity application in the first pane:
+
+  * Connect All VPNs
+  * Disconnect All VPNs
+
+When you first install the plug-in, these actions will be higher in priority than "Open", which is normally the default for applications. If that's not what you want, move them down the list in your Quicksilver preferences.
+
+NOTE: If Viscosity isn't running, any of the above actions will start it. This is generally what you want, but be aware that if you've configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.

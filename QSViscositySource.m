@@ -40,6 +40,8 @@
 
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry
 {
+    // TODO get the connection list using AppleScript
+    
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
     NSString *path = [@"~/Library/Application Support/Viscosity/OpenVPN" stringByStandardizingPath];
