@@ -28,13 +28,41 @@
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
 {
-    // check for running app
-    // if (!QSAppIsRunning(@"com.viscosityvpn.Viscosity") ) return nil;
-    NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Viscosity\" to get state of (connections where name is \"%@\")", [dObject name]];
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:scriptSource] autorelease];
-    NSString *connectionState = [[script executeAndReturnError:nil] stringValue];
-    NSLog(@"Viscosity Module: State of %@ is %@", [dObject name], connectionState);
-    return [NSArray arrayWithObjects:@"QSViscosityConnect", @"QSViscosityDisconnect", nil];
+    /*
+    We want something like this:
+       If Viscosity isn't running, offer only the "connect" action.
+       If Viscosity is running, check the state of the connection and
+         If the connection is active, offer "disconnect".
+         If the connection isn't active, offer "connect".
+    So only one or the other should ever show up.
+    */
+    NSMutableArray *newActions = [NSMutableArray arrayWithCapacity:1];
+    // Is Viscosity running right now?
+    bool viscosityRunning = false;
+    for (NSRunningApplication *app in [[NSWorkspace sharedWorkspace] runningApplications])
+    {
+        if ([[app bundleIdentifier] isEqualToString:@"com.viscosityvpn.Viscosity"])
+            viscosityRunning = true;
+    }
+    if (viscosityRunning)
+    {
+        // running, get state of this connection
+        NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Viscosity\" to get state of (connections where name is \"%@\")", [dObject name]];
+        NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:scriptSource] autorelease];
+        NSString *connectionState = [[script executeAndReturnError:nil] stringValue];
+        if([connectionState isEqualToString:@"Connected"])
+        {
+            // connected
+            [newActions addObject:@"QSViscosityDisconnect"];
+        } else {
+            // not connected
+            [newActions addObject:@"QSViscosityConnect"];
+        }
+    } else {
+        // not running
+        [newActions addObject:@"QSViscosityConnect"];
+    }
+    return newActions;
 }
 
 @end
