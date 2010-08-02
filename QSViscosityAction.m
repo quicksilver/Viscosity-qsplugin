@@ -3,11 +3,10 @@
 //  QSViscosity
 //
 //  Created by Rob McBroom on 1/26/10.
+//  Actions that apply to Viscosity overall
 //
 
 #import "QSViscosityAction.h"
-
-// TODO only show connect and disconnect for coneections in the opposite state?
 
 @implementation QSViscosityAction
 

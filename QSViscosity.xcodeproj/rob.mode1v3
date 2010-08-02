@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -266,13 +268,13 @@
 							<array>
 								<string>0259C574FE90428111CA0C5A</string>
 								<string>32DBCF9E0370C38000C91783</string>
+								<string>0259C582FE90428111CA0C5A</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>11</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -307,14 +309,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>QSViscosityAction.m</string>
+								<string>QSViscosityVPNAction.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,18 +322,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>QSViscosityAction.m</string>
+										<string>QSViscosityVPNAction.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D49EC65E1204ADD6002AFE85</string>
+										<string>D43541061207012000E3DF4D</string>
 										<key>history</key>
 										<array>
-											<string>D4C5C522110F32EA00C882F8</string>
 											<string>D4C5C543110F478400C882F8</string>
 											<string>D4E096B2110F78BD00249396</string>
 											<string>D49EC65D1204ADD6002AFE85</string>
-											<string>D4E3B30F110F487300A2EA0E</string>
+											<string>D410C2911206FA02008989BA</string>
+											<string>D410C2921206FA02008989BA</string>
+											<string>D410C2931206FA02008989BA</string>
+											<string>D410C2951206FA02008989BA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -345,14 +347,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {967, 427}}</string>
+								<string>{{0, 0}, {967, 415}}</string>
 								<key>RubberWindowFrame</key>
 								<string>263 292 1175 647 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>427pt</string>
+							<string>415pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -365,14 +367,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 432}, {967, 174}}</string>
+								<string>{{0, 420}, {967, 186}}</string>
 								<key>RubberWindowFrame</key>
 								<string>263 292 1175 647 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>174pt</string>
+							<string>186pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -391,9 +393,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D49EC65F1204ADD6002AFE85</string>
+				<string>D43541071207012000E3DF4D</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D49EC6601204ADD6002AFE85</string>
+				<string>D43541081207012000E3DF4D</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -612,7 +614,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D4C5C50B110F32A100C882F8</string>
-				<string>D49EC6611204ADD6002AFE85</string>
+				<string>D43541091207012000E3DF4D</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

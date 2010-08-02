@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>58</string>
+	<string>6A</string>
 	<key>NSPrincipalClass</key>
 	<string>QSViscosity</string>
 	<key>QSActions</key>
@@ -23,11 +23,9 @@
 		<key>QSViscosityConnect</key>
 		<dict>
 			<key>actionClass</key>
-			<string>QSAppleScriptActions</string>
-			<key>actionHandler</key>
-			<string>viscosity_connect</string>
-			<key>actionScript</key>
-			<string>Viscosity.scpt</string>
+			<string>QSViscosityVPNAction</string>
+			<key>actionSelector</key>
+			<string>connect:</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSViscosityType</string>
@@ -39,7 +37,7 @@
 			<key>precedence</key>
 			<string>2</string>
 			<key>validatesObjects</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>QSViscosityConnectAll</key>
 		<dict>
@@ -63,11 +61,9 @@
 		<key>QSViscosityDisconnect</key>
 		<dict>
 			<key>actionClass</key>
-			<string>QSAppleScriptActions</string>
-			<key>actionHandler</key>
-			<string>viscosity_disconnect</string>
-			<key>actionScript</key>
-			<string>Viscosity.scpt</string>
+			<string>QSViscosityVPNAction</string>
+			<key>actionSelector</key>
+			<string>disconnect:</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSViscosityType</string>
@@ -79,7 +75,7 @@
 			<key>precedence</key>
 			<string>2</string>
 			<key>validatesObjects</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>QSViscosityDisconnectAll</key>
 		<dict>
@@ -153,6 +149,8 @@
 		<dict>
 			<key>QSViscosityAction</key>
 			<string>QSViscosityAction</string>
+			<key>QSViscosityVPNAction</key>
+			<string>QSViscosityVPNAction</string>
 		</dict>
 		<key>QSBundleChildHandlers</key>
 		<dict>
