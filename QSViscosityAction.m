@@ -26,8 +26,10 @@
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
 {
-    // we only want these to show up if the Viscosity application
-    // is the direct object in the first pane
+    /* We only want these to show up if the Viscosity application
+       is the direct object in the first pane. Only show "Disconnect All"
+       if Viscosity is running. */
+    NSMutableArray *newActions = [NSMutableArray arrayWithCapacity:1];
     
     // get the path of the object
     NSString *path = [dObject objectForType:QSFilePathType];
@@ -35,9 +37,21 @@
     NSString *bundleIdentifier = [[NSBundle bundleWithPath:path] bundleIdentifier];
     if( [bundleIdentifier isEqualToString:@"com.viscosityvpn.Viscosity"])
     {
-        // return names of all the Viscosity specific actions
-        return [NSArray arrayWithObjects:@"QSViscosityConnectAll", @"QSViscosityDisconnectAll", nil];
+        // always offer the "Connect All" action
+        [newActions addObject:@"QSViscosityConnectAll"];
+        // Is Viscosity running right now?
+        bool viscosityRunning = false;
+        for (NSRunningApplication *app in [[NSWorkspace sharedWorkspace] runningApplications])
+        {
+            if ([[app bundleIdentifier] isEqualToString:@"com.viscosityvpn.Viscosity"])
+                viscosityRunning = true;
+        }
+        if (viscosityRunning)
+        {
+            [newActions addObject:@"QSViscosityDisconnectAll"];
+        }
     }
+    return newActions;
 }
 
 @end
