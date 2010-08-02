@@ -23,7 +23,7 @@
         // trigger a rescan
         return NO;
     }
-    NSArray *contents = [manager directoryContentsAtPath:path];
+    NSArray *contents = [manager contentsOfDirectoryAtPath:path error:NULL];
     for (NSString *connectionDirectory in contents)
     {
         connectionPath = [path stringByAppendingPathComponent:connectionDirectory];
@@ -40,8 +40,6 @@
 
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry
 {
-    // TODO get the connection list using AppleScript
-    
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
     NSString *path = [@"~/Library/Application Support/Viscosity/OpenVPN" stringByStandardizingPath];
@@ -51,7 +49,7 @@
     NSString *connectionFile = nil;
     // file handler
     NSFileManager *manager = [NSFileManager defaultManager];
-    NSArray *contents = [manager directoryContentsAtPath:path];
+    NSArray *contents = [manager contentsOfDirectoryAtPath:path error:NULL];
     for (NSString *connectionDirectory in contents)
     {
         connectionPath = [path stringByAppendingPathComponent:connectionDirectory];
