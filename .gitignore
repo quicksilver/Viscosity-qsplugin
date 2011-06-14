@@ -1,3 +1,16 @@
+.svn
 .DS_Store
+._.*
+*.o
 build
-*.xcodeproj/*.tm_build_errors
+Makefile
+autom4te.cache
+*~
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.tm_build_errors
+*.tmproj
+Developer.xcconfig
