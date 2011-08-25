@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>70</string>
+	<string>71</string>
 	<key>NSPrincipalClass</key>
 	<string>QSViscosity</string>
 	<key>QSActions</key>
@@ -109,9 +109,9 @@
 		<key>description</key>
 		<string>Access VPN connections in Viscosity</string>
 		<key>extendedDescription</key>
-		<string>&lt;h2 id=&quot;viscosity_plug_in_for_quicksilver&quot;&gt;Viscosity plug-in for Quicksilver&lt;/h2&gt;
+		<string>&lt;h2 id="viscosity_plug_in_for_quicksilver"&gt;Viscosity plug-in for Quicksilver&lt;/h2&gt;
 
-&lt;p&gt;The VPN connections you&apos;ve defined in Viscosity get added to the catalog. You can either search for them directly or right arrow into the Viscosity application.&lt;/p&gt;
+&lt;p&gt;The VPN connections you've defined in Viscosity get added to the catalog. You can either search for them directly or right arrow into the Viscosity application.&lt;/p&gt;
 
 &lt;p&gt;There are two actions available for a Viscosity connection:&lt;/p&gt;
 
@@ -127,11 +127,11 @@
 &lt;li&gt;Disconnect All VPNs&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;When you first install the plug-in, these actions will be higher in priority than &quot;Open&quot;, which is normally the default for applications. If that&apos;s not what you want, move them down the list in your Quicksilver preferences.&lt;/p&gt;
+&lt;p&gt;When you first install the plug-in, these actions will be higher in priority than "Open", which is normally the default for applications. If that's not what you want, move them down the list in your Quicksilver preferences.&lt;/p&gt;
 
-&lt;p&gt;The plug-in tries to be smart about which actions to display. For instance, you won&apos;t see &quot;Disconnect from VPN&quot; unless that connection is currently active.&lt;/p&gt;
+&lt;p&gt;The plug-in tries to be smart about which actions to display. For instance, you won't see "Disconnect from VPN" unless that connection is currently active.&lt;/p&gt;
 
-&lt;p&gt;NOTE: If Viscosity isn&apos;t running, any of the &quot;Connect…&quot; actions will start it. This is generally what you want, but be aware that if you&apos;ve configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.&lt;/p&gt;</string>
+&lt;p&gt;NOTE: If Viscosity isn't running, any of the "Connect…" actions will start it. This is generally what you want, but be aware that if you've configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.viscosityvpn.Viscosity</string>
 		<key>qsversion</key>
