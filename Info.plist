@@ -4,20 +4,24 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Viscosity</string>
 	<key>CFBundleExecutable</key>
-	<string>Viscosity Module</string>
+	<string>Viscosity Plugin</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.skurfer.Quicksilver.QSViscosity</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Viscosity Module</string>
+	<string>Viscosity Plugin</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.0</string>
 	<key>CFBundleVersion</key>
 	<string>71</string>
 	<key>NSPrincipalClass</key>
-	<string>QSViscosity</string>
+	<string>QSViscositySource</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSViscosityConnect</key>
@@ -134,10 +138,10 @@
 &lt;p&gt;NOTE: If Viscosity isn't running, any of the "Connect…" actions will start it. This is generally what you want, but be aware that if you've configured certain VPNs to connect on launch, they will be connected regardless of what you are trying to do via Quicksilver.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.viscosityvpn.Viscosity</string>
-		<key>qsversion</key>
-		<string>29CC</string>
 		<key>relatedBundles </key>
-		<array/>
+		<array>
+			<string>com.viscosityvpn.Viscosity</string>
+		</array>
 	</dict>
 	<key>QSPresetAdditions</key>
 	<array>
@@ -202,27 +206,6 @@
 				<string>com.viscosityvpn.Viscosity</string>
 				<key>name</key>
 				<string>Viscosity</string>
-				<key>version</key>
-				<string></string>
-			</dict>
-		</array>
-		<key>feature</key>
-		<integer>0</integer>
-		<key>launchLoad</key>
-		<false/>
-		<key>pathsTemplate</key>
-		<array>
-			<string>/path/to/something</string>
-		</array>
-		<key>pluginsTemplate</key>
-		<array>
-			<dict>
-				<key>id</key>
-				<string></string>
-				<key>name</key>
-				<string></string>
-				<key>version</key>
-				<string></string>
 			</dict>
 		</array>
 	</dict>
