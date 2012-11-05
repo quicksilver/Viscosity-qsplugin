@@ -19,9 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.2.0</string>
 	<key>CFBundleVersion</key>
-	<string>71</string>
-	<key>NSPrincipalClass</key>
-	<string>QSViscositySource</string>
+	<string>72</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSViscosityConnect</key>
@@ -43,25 +41,6 @@
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
-		<key>QSViscosityConnectAll</key>
-		<dict>
-			<key>actionClass</key>
-			<string>QSViscosityAction</string>
-			<key>actionSelector</key>
-			<string>connectAll:</string>
-			<key>directTypes</key>
-			<array>
-				<string>NSFilenamesPboardType</string>
-			</array>
-			<key>icon</key>
-			<string>com.viscosityvpn.Viscosity</string>
-			<key>name</key>
-			<string>Connect All VPNs</string>
-			<key>precedence</key>
-			<string>2</string>
-			<key>validatesObjects</key>
-			<true/>
-		</dict>
 		<key>QSViscosityDisconnect</key>
 		<dict>
 			<key>actionClass</key>
@@ -76,25 +55,6 @@
 			<string>com.viscosityvpn.Viscosity</string>
 			<key>name</key>
 			<string>Disconnect from VPN</string>
-			<key>precedence</key>
-			<string>2</string>
-			<key>validatesObjects</key>
-			<true/>
-		</dict>
-		<key>QSViscosityDisconnectAll</key>
-		<dict>
-			<key>actionClass</key>
-			<string>QSViscosityAction</string>
-			<key>actionSelector</key>
-			<string>disconnectAll:</string>
-			<key>directTypes</key>
-			<array>
-				<string>NSFilenamesPboardType</string>
-			</array>
-			<key>icon</key>
-			<string>com.viscosityvpn.Viscosity</string>
-			<key>name</key>
-			<string>Disconnect All VPNs</string>
 			<key>precedence</key>
 			<string>2</string>
 			<key>validatesObjects</key>
@@ -159,6 +119,48 @@
 			<key>QSViscosityVPNAction</key>
 			<string>QSViscosityVPNAction</string>
 		</dict>
+		<key>QSApplicationActions</key>
+		<dict>
+			<key>com.viscosityvpn.Viscosity</key>
+			<dict>
+				<key>QSViscosityConnectAll</key>
+				<dict>
+					<key>actionClass</key>
+					<string>QSViscosityAction</string>
+					<key>actionSelector</key>
+					<string>connectAll:</string>
+					<key>directTypes</key>
+					<array>
+						<string>NSFilenamesPboardType</string>
+					</array>
+					<key>icon</key>
+					<string>com.viscosityvpn.Viscosity</string>
+					<key>name</key>
+					<string>Connect All VPNs</string>
+					<key>precedence</key>
+					<string>2</string>
+				</dict>
+				<key>QSViscosityDisconnectAll</key>
+				<dict>
+					<key>actionClass</key>
+					<string>QSViscosityAction</string>
+					<key>actionSelector</key>
+					<string>disconnectAll:</string>
+					<key>directTypes</key>
+					<array>
+						<string>NSFilenamesPboardType</string>
+					</array>
+					<key>icon</key>
+					<string>com.viscosityvpn.Viscosity</string>
+					<key>name</key>
+					<string>Disconnect All VPNs</string>
+					<key>precedence</key>
+					<string>2</string>
+					<key>validatesObjects</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
 		<key>QSBundleChildHandlers</key>
 		<dict>
 			<key>com.viscosityvpn.Viscosity</key>
@@ -173,20 +175,6 @@
 		<dict>
 			<key>QSViscositySource</key>
 			<string>QSViscositySource</string>
-		</dict>
-		<key>QSPreferencePanesTemplate</key>
-		<dict>
-			<key>QSViscosity_PrefPane</key>
-			<dict>
-				<key>class</key>
-				<string>QSPreferencePane</string>
-				<key>description</key>
-				<string>Preferences</string>
-				<key>icon</key>
-				<string></string>
-				<key>name</key>
-				<string>QSViscosity</string>
-			</dict>
 		</dict>
 	</dict>
 	<key>QSRequirements</key>
