@@ -12,6 +12,7 @@
 		BBF581840B1D9DC3003CFF55 /* QSViscositySource.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF581830B1D9DC3003CFF55 /* QSViscositySource.m */; };
 		D410C28E1206F9DD008989BA /* QSViscosityVPNAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D410C28D1206F9DD008989BA /* QSViscosityVPNAction.m */; };
 		D46077561648025F003D83B4 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46077541648023C003D83B4 /* ScriptingBridge.framework */; };
+		D4607762164810BC003D83B4 /* ViscosityBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D4607761164810BC003D83B4 /* ViscosityBridge.m */; };
 		D4731D001647FCEE00FC9816 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4731CFF1647FCBA00FC9816 /* QSFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 		D410C28D1206F9DD008989BA /* QSViscosityVPNAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSViscosityVPNAction.m; sourceTree = "<group>"; };
 		D460775316480219003D83B4 /* Viscosity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Viscosity.h; sourceTree = "<group>"; };
 		D46077541648023C003D83B4 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		D4607760164810BC003D83B4 /* ViscosityBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViscosityBridge.h; sourceTree = "<group>"; };
+		D4607761164810BC003D83B4 /* ViscosityBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViscosityBridge.m; sourceTree = "<group>"; };
 		D4731CF01647FA4D00FC9816 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		D4731CF11647FA4D00FC9816 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		D4731CF21647FA4D00FC9816 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				D460775316480219003D83B4 /* Viscosity.h */,
+				D4607760164810BC003D83B4 /* ViscosityBridge.h */,
+				D4607761164810BC003D83B4 /* ViscosityBridge.m */,
 				BBF5817A0B1D9D84003CFF55 /* QSViscosityAction.h */,
 				BBF5817B0B1D9D84003CFF55 /* QSViscosityAction.m */,
 				BBF581820B1D9DC3003CFF55 /* QSViscositySource.h */,
@@ -201,6 +206,7 @@
 				BBF5817C0B1D9D84003CFF55 /* QSViscosityAction.m in Sources */,
 				BBF581840B1D9DC3003CFF55 /* QSViscositySource.m in Sources */,
 				D410C28E1206F9DD008989BA /* QSViscosityVPNAction.m in Sources */,
+				D4607762164810BC003D83B4 /* ViscosityBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

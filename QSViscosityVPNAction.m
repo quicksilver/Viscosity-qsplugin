@@ -10,21 +10,36 @@
 
 @implementation QSViscosityVPNAction
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        Viscosity = [QSViscosity() retain];
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [Viscosity release];
+    [super dealloc];
+}
+
+#pragma mark Quicksilver Actions
+
 - (QSObject *)connect:(QSObject *)dObject
 {
-    NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Viscosity\" to connect (connections where name is \"%@\")", [dObject name]];
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:scriptSource] autorelease];
-    [script executeAndReturnError:nil];
+    [Viscosity connect:[dObject objectForType:QSViscosityType]];
     return nil;
 }
 
 - (QSObject *)disconnect:(QSObject *)dObject
 {
-    NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Viscosity\" to disconnect (connections where name is \"%@\")", [dObject name]];
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:scriptSource] autorelease];
-    [script executeAndReturnError:nil];
+    [Viscosity disconnect:[dObject objectForType:QSViscosityType]];
     return nil;
 }
+
+#pragma mark Quicksilver Validation
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
 {
@@ -36,33 +51,38 @@
          If the connection isn't active, offer "connect".
     So only one or the other should ever show up.
     */
-    NSMutableArray *newActions = [NSMutableArray arrayWithCapacity:1];
-    // Is Viscosity running right now?
-    bool viscosityRunning = false;
-    for (NSRunningApplication *app in [[NSWorkspace sharedWorkspace] runningApplications])
-    {
-        if ([[app bundleIdentifier] isEqualToString:@"com.viscosityvpn.Viscosity"])
-            viscosityRunning = true;
-    }
-    if (viscosityRunning)
+    if ([Viscosity isRunning])
     {
         // running, get state of this connection
         NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Viscosity\" to get state of (connections where name is \"%@\")", [dObject name]];
-        NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:scriptSource] autorelease];
+        NSAppleScript *script = [[NSAppleScript alloc] initWithSource:scriptSource];
         NSString *connectionState = [[script executeAndReturnError:nil] stringValue];
+        [script release];
         if([connectionState isEqualToString:@"Connected"])
+        // hopefully we can use this instead one day
+        //ViscosityConnection *connection = [self viscosityConnectionFrom:dObject];
+        //if ([[connection state] isEqualToString:@"Connected"])
         {
             // connected
-            [newActions addObject:@"QSViscosityDisconnect"];
+            return [NSArray arrayWithObject:@"QSViscosityDisconnect"];
         } else {
             // not connected
-            [newActions addObject:@"QSViscosityConnect"];
+            return [NSArray arrayWithObject:@"QSViscosityConnect"];
         }
     } else {
         // not running
-        [newActions addObject:@"QSViscosityConnect"];
+        return [NSArray arrayWithObject:@"QSViscosityConnect"];
     }
-    return newActions;
+    return nil;
+}
+
+#pragma mark Helper Methods
+
+- (ViscosityConnection *)viscosityConnectionFrom:(QSObject *)object
+{
+    // currently broken - [Viscosity connections] is empty
+    NSString *connectionName = [object objectForType:QSViscosityType];
+    return [[Viscosity connections] objectWithName:connectionName];
 }
 
 @end

@@ -10,48 +10,45 @@
 
 @implementation QSViscosityAction
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        Viscosity = [QSViscosity() retain];
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [Viscosity release];
+    [super dealloc];
+}
+
+#pragma mark Quicksilver Actions
+
 - (QSObject *)connectAll:(QSObject *)dObject
 {
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:@"tell application \"Viscosity\" to connectall"] autorelease];
-    [script executeAndReturnError:nil];
+    [Viscosity connectall];
     return nil;
 }
 
 - (QSObject *)disconnectAll:(QSObject *)dObject
 {
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:@"tell application \"Viscosity\" to disconnectall"] autorelease];
-    [script executeAndReturnError:nil];
+    [Viscosity disconnectall];
     return nil;
 }
 
+#pragma mark Quicksilver Validation
+
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
 {
-    /* We only want these to show up if the Viscosity application
-       is the direct object in the first pane. Only show "Disconnect All"
-       if Viscosity is running. */
-    NSMutableArray *newActions = [NSMutableArray arrayWithCapacity:1];
-    
-    // get the path of the object
-    NSString *path = [dObject objectForType:QSFilePathType];
-    // get the bundle identifier for the thing at this path
-    NSString *bundleIdentifier = [[NSBundle bundleWithPath:path] bundleIdentifier];
-    if( [bundleIdentifier isEqualToString:@"com.viscosityvpn.Viscosity"])
-    {
-        // always offer the "Connect All" action
-        [newActions addObject:@"QSViscosityConnectAll"];
-        // Is Viscosity running right now?
-        bool viscosityRunning = false;
-        for (NSRunningApplication *app in [[NSWorkspace sharedWorkspace] runningApplications])
-        {
-            if ([[app bundleIdentifier] isEqualToString:@"com.viscosityvpn.Viscosity"])
-                viscosityRunning = true;
-        }
-        if (viscosityRunning)
-        {
-            [newActions addObject:@"QSViscosityDisconnectAll"];
-        }
+    // these are set up as "application actions", which don't support validation as of 3936
+    // but if that ever gets fixed, this will take care of it
+    if ([Viscosity isRunning]) {
+        return [NSArray arrayWithObject:@"QSViscosityDisconnectAll"];
     }
-    return newActions;
+    return nil;
 }
 
 @end

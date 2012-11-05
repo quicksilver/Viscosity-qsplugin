@@ -5,9 +5,10 @@
 //  Created by Rob McBroom on 8/2/10.
 //
 
-#define kQSViscosityAction @"QSViscosityAction"
+#import "ViscosityBridge.h"
 
 @interface QSViscosityVPNAction : QSActionProvider
 {
+    ViscosityApplication *Viscosity;
 }
 @end
