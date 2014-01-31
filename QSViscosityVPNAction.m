@@ -24,12 +24,16 @@
 - (QSObject *)connect:(QSObject *)dObject
 {
     [Viscosity connect:[dObject objectForType:QSViscosityType]];
+    NSDictionary *info = @{@"object": dObject};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"QSEventNotification" object:@"QSViscosityVPNConnect" userInfo:info];
     return nil;
 }
 
 - (QSObject *)disconnect:(QSObject *)dObject
 {
     [Viscosity disconnect:[dObject objectForType:QSViscosityType]];
+    NSDictionary *info = @{@"object": dObject};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"QSEventNotification" object:@"QSViscosityVPNDisconnect" userInfo:info];
     return nil;
 }
 
