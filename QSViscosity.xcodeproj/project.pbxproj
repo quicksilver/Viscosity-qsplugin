@@ -13,7 +13,6 @@
 		D410C28E1206F9DD008989BA /* QSViscosityVPNAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D410C28D1206F9DD008989BA /* QSViscosityVPNAction.m */; };
 		D46077561648025F003D83B4 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46077541648023C003D83B4 /* ScriptingBridge.framework */; };
 		D4607762164810BC003D83B4 /* ViscosityBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D4607761164810BC003D83B4 /* ViscosityBridge.m */; };
-		D4731D001647FCEE00FC9816 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4731CFF1647FCBA00FC9816 /* QSFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		D4731CF31647FA4D00FC9816 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		D4731CF41647FA4D00FC9816 /* Quicksilver.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
 		D4731CF51647FA4D00FC9816 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		D4731CFF1647FCBA00FC9816 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E09662110F68D300249396 /* Viscosity Plugin.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Viscosity Plugin.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -45,7 +43,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
-				D4731D001647FCEE00FC9816 /* QSFoundation.framework in Frameworks */,
 				D46077561648025F003D83B4 /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
-				D4731CFF1647FCBA00FC9816 /* QSFoundation.framework */,
 				D46077541648023C003D83B4 /* ScriptingBridge.framework */,
 			);
 			name = Frameworks;
@@ -218,7 +214,7 @@
 			baseConfigurationReference = D4731CF31647FA4D00FC9816 /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				PRODUCT_NAME = "Viscosity Plugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -227,7 +223,7 @@
 			baseConfigurationReference = D4731CF31647FA4D00FC9816 /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				PRODUCT_NAME = "Viscosity Plugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -235,6 +231,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D4731CF11647FA4D00FC9816 /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 			};
 			name = Debug;
 		};
@@ -242,6 +239,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D4731CF51647FA4D00FC9816 /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 			};
 			name = Release;
 		};

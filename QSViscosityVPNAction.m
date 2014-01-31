@@ -14,15 +14,9 @@
 {
     self = [super init];
     if (self) {
-        Viscosity = [QSViscosity() retain];
+        Viscosity = QSViscosity();
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [Viscosity release];
-    [super dealloc];
 }
 
 #pragma mark Quicksilver Actions
@@ -57,7 +51,6 @@
         NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Viscosity\" to get state of (connections where name is \"%@\")", [dObject name]];
         NSAppleScript *script = [[NSAppleScript alloc] initWithSource:scriptSource];
         NSString *connectionState = [[script executeAndReturnError:nil] stringValue];
-        [script release];
         if([connectionState isEqualToString:@"Connected"])
         // hopefully we can use this instead one day
         //ViscosityConnection *connection = [self viscosityConnectionFrom:dObject];

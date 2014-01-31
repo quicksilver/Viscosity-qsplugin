@@ -14,15 +14,9 @@
 {
     self = [super init];
     if (self) {
-        Viscosity = [QSViscosity() retain];
+        Viscosity = QSViscosity();
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [Viscosity release];
-    [super dealloc];
 }
 
 #pragma mark Quicksilver Actions

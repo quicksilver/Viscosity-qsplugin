@@ -7,7 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Viscosity</string>
 	<key>CFBundleExecutable</key>
-	<string>Viscosity Plugin</string>
+	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.skurfer.Quicksilver.QSViscosity</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -188,6 +188,8 @@
 				<string>Viscosity</string>
 			</dict>
 		</array>
+		<key>version</key>
+		<string>4001</string>
 	</dict>
 </dict>
 </plist>

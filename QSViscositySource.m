@@ -6,8 +6,6 @@
 //
 
 #import "QSViscositySource.h"
-#import <QSCore/QSObject.h>
-
 
 @implementation QSViscositySource
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry
