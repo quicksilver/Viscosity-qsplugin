@@ -28,6 +28,8 @@
 			<string>QSViscosityVPNAction</string>
 			<key>actionSelector</key>
 			<string>connect:</string>
+			<key>commandFormat</key>
+			<string>Connect to %@</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSViscosityType</string>
@@ -47,6 +49,8 @@
 			<string>QSViscosityVPNAction</string>
 			<key>actionSelector</key>
 			<string>disconnect:</string>
+			<key>commandFormat</key>
+			<string>Disconnect from %@</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSViscosityType</string>
