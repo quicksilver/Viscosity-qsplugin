@@ -207,6 +207,16 @@
 				<string>Viscosity</string>
 			</dict>
 		</dict>
+		<key>QSTypeDefinitions</key>
+		<dict>
+			<key>QSViscosityType</key>
+			<dict>
+				<key>icon</key>
+				<string>com.viscosityvpn.Viscosity</string>
+				<key>name</key>
+				<string>Viscosity VPN Connection</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>QSRequirements</key>
 	<dict>
