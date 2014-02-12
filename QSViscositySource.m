@@ -55,7 +55,7 @@
         NSString *connSource = [NSString stringWithContentsOfFile:connectionFile encoding:NSUTF8StringEncoding error:nil];
         if (!connSource)
         {
-            NSLog(@"unable to read Viscosity settings from %@", connectionFile);
+            //NSLog(@"unable to read Viscosity settings from %@", connectionFile);
             continue;
         }
         
