@@ -59,9 +59,7 @@
             continue;
         }
         
-        connSource = [connSource stringByReplacing:@"\n" with:@"\r"];
-        NSArray *lines = [connSource componentsSeparatedByString:@"\r"];
-        for (NSString *line in lines)
+        for (NSString *line in [connSource lines])
         {
             // look for the line with the name
             /* This is a bit hacky, but we need to find the line somehow anyway,
