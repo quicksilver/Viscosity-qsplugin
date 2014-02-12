@@ -195,7 +195,7 @@
 				<key>provider</key>
 				<string>QSViscosityVPNAction</string>
 				<key>type</key>
-				<string>Viscosity</string>
+				<string>Network</string>
 			</dict>
 			<key>QSViscosityVPNDisconnect</key>
 			<dict>
@@ -208,7 +208,7 @@
 				<key>provider</key>
 				<string>QSViscosityVPNAction</string>
 				<key>type</key>
-				<string>Viscosity</string>
+				<string>Network</string>
 			</dict>
 		</dict>
 		<key>QSTypeDefinitions</key>
