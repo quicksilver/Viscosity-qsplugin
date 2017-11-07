@@ -71,6 +71,8 @@
             {
                 // this looks like the line with the name
                 NSString *connName = [lineParts objectAtIndex:1];
+				// strip quotes
+				connName = [connName stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
                 newObject = [QSObject objectWithName:connName];
                 [newObject setObject:connName forType:QSViscosityType];
                 [newObject setObject:connName forType:QSTextType];
